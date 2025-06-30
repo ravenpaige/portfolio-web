@@ -7,120 +7,130 @@
   <title>My Portfolio</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+
+    <!-- Google Fonts: Open Sans (and optional Merriweather pairing) -->
+<link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&family=Merriweather:wght@400;700&display=swap" rel="stylesheet">
+
 </head>
 <body>
   <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="index.html">My Portfolio</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item"><a class="nav-link" href="projects.html">Projects</a></li>
-          <li class="nav-item"><a class="nav-link" href="writing.html">Writing</a></li>
-          <li class="nav-item"><a class="nav-link" href="ux.html">UX Work</a></li>
-		  <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
-          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-        </ul>
-      </div>
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Home / About</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+
+        <!-- Portfolio Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Portfolio
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+            <li><a class="dropdown-item" href="portfolio-ux.html">UX + Forms</a></li>
+            <li><a class="dropdown-item" href="portfolio-tech-writing.html">Tech Writing</a></li>
+            <li><a class="dropdown-item" href="portfolio-webdev.html">Web Dev</a></li>
+            <li><a class="dropdown-item" href="portfolio-projects.html">Projects</a></li>
+          </ul>
+        </li>
+
+        <!-- Other nav items -->
+        <li class="nav-item"><a class="nav-link" href="blog.html">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="freelance.html">Freelance Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+      </ul>
     </div>
-  </nav>
+  </div>
+</nav>
 
-  <header class="container py-5">
-    <h1 class="display-4 text-center">Welcome to My Portfolio</h1>
-    <p class="lead text-center">Showcasing my work in web development, writing, and UX design.</p>
-	<p class="text-center small-caps">This site was (mostly) AI generated.</p>
+  <header class="container py-4" style="padding-top: 1rem;">
+    <h1 class="display-4 text-center">GR8UX</h1>
+    <p class="lead text-center"><strong>Expert Direction; Exceptional Results&nbsp;</strong></p>
+	<!--<p class="text-center small-caps">This site was (mostly) AI generated.</p> -->
   </header>
+<!-- index.html -->
+    
+    <section class="container py-4">
+  <h2 class="mb-4">About Me</h2>
+  <p>
+    Hi, I’m <strong>Terri Clark</strong> — a content strategist, system integrator, and technical communicator who makes complex stuff make sense.
+  </p>
 
+  <p>
+    Over the past decade, I’ve helped engineering teams, repair divisions, and marketing departments work smarter by building better tools, writing clearer content, and connecting the dots between people and platforms.
+  </p>
+
+  <p>
+    I’m a systems thinker with a practical streak: sometimes I code custom PHP/MySQL or javascript apps, sometimes I configure a low-code form builder or app generator, and sometimes I just rewrite your documentation so people stop filing help tickets.
+  </p>
+
+  <p>
+    I work remotely from Cassopolis, Michigan, and I care about sustainability, accessibility, and using tech to make life more manageable — not more complicated.
+  </p>
+        <p>Do you have a project or a problem that needs my help?</p>
+
+  <p class="mt-4">
+    <a href="freelance.html" class="btn btn-outline-primary">Work with Me</a>
+  </p>
+        <p>I'm also open to full-time, part-time, or contract opportunities.</p>
+         <p class="mt-4">
+    <a href="portfolio.html" class="btn btn-outline-primary">View My Portfolio</a>
+</section>
+    
+    
+    <section class="container py-4">
+  <h2 class="mb-4">What I Believe</h2>
+
+  <ul class="list-unstyled">
+    <li class="mb-3"><strong>Clear is kind.</strong> Good documentation and intuitive workflows reduce stress, prevent errors, and help people do their best work.</li>
+
+    <li class="mb-3"><strong>Right tool, right job.</strong> Whether it’s custom code, a low-code platform, or just a better process, I choose what fits — not what’s trending.</li>
+
+    <li class="mb-3"><strong>The devil’s in the details — and that’s where I work.</strong> I believe small things make a big difference, and I take the time to get them right.</li>
+
+    <li class="mb-3"><strong>Systems shape experience.</strong> A broken form or a missing instruction isn’t minor — it’s a pain point. I fix those so people can focus on what matters.</li>
+
+    <li class="mb-3"><strong>Sustainability matters.</strong> In tools, in teams, and in life. I design systems that last, support growth, and don’t burn people out.</li>
+
+    <li class="mb-3"><strong>Collaboration beats perfection.</strong> Good work gets done by talking things through, learning as you go, and staying flexible enough to improve over time.</li>
+  </ul>
+</section>
+    
+    
+    <section class="container py-4 bg-light">
+  <h2 class="mb-4 text-center">What People Say</h2>
+  <div class="row">
+    <div class="col-md-4 mb-4">
+      <blockquote class="blockquote">
+        <p>"Terri’s attention to detail produces consistently great results. She has a surprising wealth of knowledge — from the artistic to the managerial — and she always made time to collaborate. She’d be an asset to any organization."</p>
+        <footer class="blockquote-footer">Charles Chiu, Engineering Manager at Yorkville Sound</footer>
+      </blockquote>
+    </div>
+    <div class="col-md-4 mb-4">
+      <blockquote class="blockquote">
+        <p>"Terri is a great resource for training, documentation, and programming. She understands the products and how they relate to the customer. Gets the job done — and done well."</p>
+        <footer class="blockquote-footer">Gary Linley, D365 Project Lead at National Standard</footer>
+      </blockquote>
+    </div>
+    <div class="col-md-4 mb-4">
+      <blockquote class="blockquote">
+        <p>"Terri is both creative and proactive — she drove the project, not just tracked it. Her deliverables were top-notch and exceeded expectations. Between her management skills and creative vision, she's an ideal partner."</p>
+        <footer class="blockquote-footer">Dale Sandberg, Product Manager at Sonance</footer>
+      </blockquote>
+    </div>
+  </div>
+  <p class="text-center mt-4"><a href="https://www.linkedin.com/in/taclark/" target="_blank">More recommendations on LinkedIn</a></p>
+</section>
   <footer class="text-center py-4 bg-light">
-    <p>&copy; 2025 Theresa A. Clark. All rights reserved.</p>
+    <p>&copy; 2025 GR8UX. All rights reserved.</p>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
 
-<!-- projects.html -->
-<!-- Same header/nav/footer as above -->
-<section class="container py-5">
-  <h2 class="mb-4">Projects</h2>
-  <div class="row">
-    <div class="col-md-4 mb-4">
-      <div class="card">
-        <div class="card-body">
-          <h5 class="card-title">Project One</h5>
-          <p class="card-text">Brief description of what this project does and why it matters.</p>
-          <a href="#" class="btn btn-primary">View More</a>
-        </div>
-      </div>
-    </div>
-    <!-- Repeat for more projects -->
-  </div>
-</section>
 
-<!-- writing.html -->
-<section class="container py-5">
-  <h2 class="mb-4">Writing Samples</h2>
-  <ul class="list-group">
-    <li class="list-group-item">
-      <a href="#">Technical Manual: High-Power Amplifier Calibration</a>
-    </li>
-    <li class="list-group-item">
-      <a href="#">Blog Post: Designing for Accessibility</a>
-    </li>
-    <!-- Add more as needed -->
-  </ul>
-</section>
-
-<!-- ux.html -->
-<section class="container py-5">
-  <h2 class="mb-4">UX Work</h2>
-  <div class="row">
-    <div class="col-md-6 mb-4">
-      <img src="images/sample-ux1.png" class="img-fluid" alt="UX Sample 1">
-    </div>
-    <div class="col-md-6 mb-4">
-      <img src="images/sample-ux2.png" class="img-fluid" alt="UX Sample 2">
-    </div>
-    <!-- More UX images as needed -->
-  </div>
-</section>
-
-<!-- about.html -->
-<section class="container py-5">
-  <h2 class="mb-4">About Me</h2>
-  <p>This is where you'll write a short bio about your experience, values, and interests.</p>
-</section>
-
-<!-- resume.html -->
-<section class="container py-5">
-  <h2 class="mb-4">Resume</h2>
-  <p>You can link to a downloadable resume or embed it using an iframe or Google Docs viewer.</p>
-  <a href="docs/my_resume.pdf" class="btn btn-primary" download>Download Resume</a>
-</section>
-
-<!-- contact.html -->
-<section class="container py-5">
-  <h2 class="mb-4">Contact Me</h2>
-  <p>If you'd like to get in touch, please fill out the form below.</p>
-  <div class="ratio ratio-4x3">
-    <!-- Replace with your real form embed code -->
-    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSdFsePp9YHGE90xrlKJuUxPwnhS9gqhz9muXaX50HsXHi2VsQ/viewform?embedded=true" width="100%" height="600" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
-
-  </div>
-</section>
-
-<!-- css/style.css -->
-body {
-  font-family: 'Segoe UI', sans-serif;
-  background-color: #f9f9f9;
-  color: #333;
-}
-
-footer {
-  background-color: #eee;
-}
-
-<!-- js/script.js -->
-// You can add smooth scrolling or interactive behaviors here.

@@ -1,0 +1,139 @@
+/* main style sheet */
+//*body {
+    background-image: repeating-linear-gradient(
+      to right,
+      hsla(198, 76%, 36%, 0.24),
+      hsla(198, 76%, 36%, 0.24) 0.25pt,
+      transparent .25pt,
+      transparent 0.1in
+    );
+  } *//
+
+ body {
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+footer {
+  background-color: #eee;
+}
+    py-5 {
+    padding-top: 1 rem;
+    }
+
+
+/* Primary: strong brand button */
+.btn-primary {
+  background-color: #1677a1;
+  border-color: #25566b;
+  color: #fff;
+}
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #1B5A75;
+  border-color: #204B61;
+}
+.btn-primary:active {
+  background-color: #153C4F;
+  border-color: #122E3E;
+}
+.btn-primary:disabled {
+  background-color: #99c4da;
+  border-color: #8ab2c4;
+  opacity: 0.7;
+}
+
+/* Outline Primary: lightweight but clickable */
+.btn-outline-primary {
+  color: #1677a1;
+  border-color: #25566b;
+  background-color: transparent;
+}
+.btn-outline-primary:hover,
+.btn-outline-primary:focus {
+  background-color: #1B5A75;
+  color: #fff;
+  border-color: #204B61;
+}
+.btn-outline-primary:active {
+  background-color: #153C4F;
+  border-color: #122E3E;
+}
+.btn-outline-primary:disabled {
+  color: #99c4da;
+  border-color: #8ab2c4;
+  opacity: 0.7;
+}
+
+/* Secondary: neutral actions */
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #5c636a;
+  color: #fff;
+}
+.btn-secondary:hover,
+.btn-secondary:focus {
+  background-color: #5c636a;
+  border-color: #4b5257;
+}
+.btn-secondary:active {
+  background-color: #43494e;
+  border-color: #383e42;
+}
+.btn-secondary:disabled {
+  background-color: #ced4da;
+  border-color: #adb5bd;
+  opacity: 0.7;
+}
+
+/* Outline Secondary: subtle alternative */
+.btn-outline-secondary {
+  color: #6c757d;
+  border-color: #6c757d;
+  background-color: transparent;
+}
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus {
+  background-color: #6c757d;
+  color: #fff;
+  border-color: #5c636a;
+}
+.btn-outline-secondary:active {
+  background-color: #43494e;
+  border-color: #383e42;
+}
+.btn-outline-secondary:disabled {
+  color: #adb5bd;
+  border-color: #adb5bd;
+  opacity: 0.7;
+}
+
+/* Link-style buttons (unstyled except for hover) */
+.btn-link {
+  color: #1677a1;
+  text-decoration: underline;
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: #1B5A75;
+  text-decoration: none;
+}
+.btn-link:disabled {
+  color: #aac8d8;
+  pointer-events: none;
+  opacity: 0.7;
+}
+  h1.display-4 {
+    color: #1677a1;
+    font-weight: 600;
+  }
+
+/* Sticky navbar on desktop */
+  @media (min-width: 992px) {
+    .navbar {
+      position: sticky;
+      top: 0;
+      z-index: 1030; /* just above dropdowns */
+    }
+  }
