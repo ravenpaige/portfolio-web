@@ -1,16 +1,20 @@
-/* main style sheet */
-//*body {
-    background-image: repeating-linear-gradient(
-      to right,
-      hsla(198, 76%, 36%, 0.24),
-      hsla(198, 76%, 36%, 0.24) 0.25pt,
-      transparent .25pt,
-      transparent 0.1in
-    );
-  } *//
 
- body {
-  font-family: 'Segoe UI', sans-serif;
+/* main style sheet */
+
+/* Optional body background gradient (currently disabled)
+body {
+  background-image: repeating-linear-gradient(
+    to right,
+    hsla(198, 76%, 36%, 0.24),
+    hsla(198, 76%, 36%, 0.24) 0.25pt,
+    transparent .25pt,
+    transparent 0.1in
+  );
+}
+*/
+
+body {
+  font-family: 'Open Sans', 'Segoe UI', sans-serif;
   background-color: #f9f9f9;
   color: #333;
 }
@@ -18,32 +22,44 @@
 footer {
   background-color: #eee;
 }
-    py-5 {
-    padding-top: 1 rem;
-    }
+
+section.container {
+  margin-bottom: 2rem;
+}
 
 /* === Enhanced Navbar Styling === */
-
 .navbar {
-	/* background-color: #1b3a4b; /* Deeper brand tone */
-	box-shadow: 0 2px 6px #6A8E9E; /* Subtle shadow for separation */
-	-webkit-box-shadow: 0 2px 6px #6A8E9E;
+  background-color: #ffffff;
+  border-bottom: 1px solid #dcdcdc;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.06);
+  position: sticky;
+  top: 0;
+  z-index: 1030;
 }
 
-/* Brand and nav link text color */
 .navbar .nav-link,
 .navbar-brand {
-  color: #1b3a4b 
+  color: #1b3a4b;
+  font-weight: 500;
+  transition: all 0.2s ease-in-out;
+  font-size: 1.1rem;
+  padding: 0.75rem 1rem;
 }
 
-/* Hover states for nav links */
 .navbar .nav-link:hover,
+.navbar .nav-link:focus,
 .navbar-brand:hover {
-	color: #A9D0ED;
-	background-color: #1677A1;
+  color: #ffffff;
+  background-color: #1677a1;
+  border-radius: 4px;
 }
 
-/* Primary: strong brand button */
+.nav-link:focus {
+  outline: 2px dashed #1677a1;
+  outline-offset: 2px;
+}
+
+/* Button Styling */
 .btn-primary {
   background-color: #1677a1;
   border-color: #25566b;
@@ -64,7 +80,6 @@ footer {
   opacity: 0.7;
 }
 
-/* Outline Primary: lightweight but clickable */
 .btn-outline-primary {
   color: #1677a1;
   border-color: #25566b;
@@ -86,7 +101,6 @@ footer {
   opacity: 0.7;
 }
 
-/* Secondary: neutral actions */
 .btn-secondary {
   background-color: #6c757d;
   border-color: #5c636a;
@@ -107,7 +121,6 @@ footer {
   opacity: 0.7;
 }
 
-/* Outline Secondary: subtle alternative */
 .btn-outline-secondary {
   color: #6c757d;
   border-color: #6c757d;
@@ -129,7 +142,6 @@ footer {
   opacity: 0.7;
 }
 
-/* Link-style buttons (unstyled except for hover) */
 .btn-link {
   color: #1677a1;
   text-decoration: underline;
@@ -144,32 +156,22 @@ footer {
   pointer-events: none;
   opacity: 0.7;
 }
-  h1.display-4 {
-    color: #1677a1;
-    font-weight: 600;
-  }
 
-
+h1.display-4 {
+  color: #1677a1;
+  font-weight: 600;
+}
 
 /* Optional: Accent brand bar */
 .brand-stripe {
   height: 8px;
   background-color: #1677a1;
 }
+
 a {
-	color: #1677A1;
+  color: #1677a1;
 }
-
-
-/* Sticky navbar on desktop */
-  @media (min-width: 992px) {
-    .navbar {
-      position: sticky;
-      top: 0;
-      z-index: 1030; /* just above dropdowns */
-    }
-      .navbar .nav-link {
-    padding: 0.75rem 1rem;
-    font-size: 1.05rem;
-  }
-  }
+a:hover {
+  color: #0d4d6b;
+  text-decoration: underline;
+}
