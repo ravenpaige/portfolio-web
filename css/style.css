@@ -22,6 +22,26 @@ footer {
     padding-top: 1 rem;
     }
 
+/* === Enhanced Navbar Styling === */
+
+.navbar {
+	/* background-color: #1b3a4b; /* Deeper brand tone */
+	box-shadow: 0 2px 6px #6A8E9E; /* Subtle shadow for separation */
+	-webkit-box-shadow: 0 2px 6px #6A8E9E;
+}
+
+/* Brand and nav link text color */
+.navbar .nav-link,
+.navbar-brand {
+  color: #1b3a4b 
+}
+
+/* Hover states for nav links */
+.navbar .nav-link:hover,
+.navbar-brand:hover {
+	color: #A9D0ED;
+	background-color: #1677A1;
+}
 
 /* Primary: strong brand button */
 .btn-primary {
@@ -129,6 +149,18 @@ footer {
     font-weight: 600;
   }
 
+
+
+/* Optional: Accent brand bar */
+.brand-stripe {
+  height: 8px;
+  background-color: #1677a1;
+}
+a {
+	color: #1677A1;
+}
+
+
 /* Sticky navbar on desktop */
   @media (min-width: 992px) {
     .navbar {
@@ -136,4 +168,8 @@ footer {
       top: 0;
       z-index: 1030; /* just above dropdowns */
     }
+      .navbar .nav-link {
+    padding: 0.75rem 1rem;
+    font-size: 1.05rem;
+  }
   }
