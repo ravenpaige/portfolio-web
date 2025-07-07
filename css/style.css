@@ -19,6 +19,20 @@ body {
   color: #333;
 }
 
+.navbar-brand img {
+  max-height: 40px;
+  margin-right: 10px;
+}
+
+h1 {
+  margin-bottom: 1.5rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  color: #555;
+}
+
 footer {
   background-color: #eee;
 }
@@ -57,6 +71,12 @@ section.container {
 .nav-link:focus {
   outline: 2px dashed #1677a1;
   outline-offset: 2px;
+}
+
+.navbar-nav .nav-link.active {
+  font-weight: bold;
+  color: #0d6efd !important; /* Bootstrap primary blue */
+  border-bottom: 2px solid #0d6efd;
 }
 
 /* Button Styling */
@@ -175,3 +195,91 @@ a:hover {
   color: #0d4d6b;
   text-decoration: underline;
 }
+
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 40px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #1677a1;
+    }
+    .timeline-entry {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .timeline-entry::before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 0.2rem;
+      width: 12px;
+      height: 12px;
+      background: #1677a1;
+      border-radius: 50%;
+    }
+    .cta-section {
+      background-image: radial-gradient(circle at top left, #e0f4fa 0%, #ffffff 100%);
+      transition: background-color 0.3s ease;
+    }
+
+    .timeline {
+      position: relative;
+      margin: 2rem 0;
+      padding-left: 40px;
+    }
+    .timeline::before {
+      content: "";
+      position: absolute;
+      left: 10px;
+      top: 0;
+      bottom: 0;
+      width: 2px;
+      background: #1677a1;
+    }
+    .timeline-entry {
+      position: relative;
+      margin-bottom: 2rem;
+    }
+    .timeline-entry::before {
+      content: "";
+      position: absolute;
+      left: -6px;
+      top: 0.2rem;
+      width: 12px;
+      height: 12px;
+      background: #1677a1;
+      border-radius: 50%;
+    }
+
+
+    @media (prefers-color-scheme: dark) {
+      body {
+        background-color: #121212;
+        color: #e4e4e4;
+      }
+      .timeline::before,
+      .timeline-entry::before {
+        background: #90caf9;
+      }
+      .cta-section {
+        background-image: radial-gradient(circle at top left, #1c2a35 0%, #121212 100%);
+        color: #e4e4e4;
+      }
+      .btn-primary {
+        background-color: #90caf9;
+        border-color: #64b5f6;
+        color: #000;
+      }
+      .btn-outline-primary {
+        color: #90caf9;
+        border-color: #90caf9;
+      }
+    }
+
