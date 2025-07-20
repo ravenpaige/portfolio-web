@@ -14,7 +14,7 @@ body {
 
 body {
 	font-family: 'Open Sans', 'Segoe UI', sans-serif;
-	background-color: #E7E7E7;
+	background-color: #FFFFFF;
 	color: #4B4A4A;
 }
 
@@ -62,7 +62,7 @@ h1 {
 }
 
 footer {
-	background-color: #E1E1F9;
+	background-color: #FFFFFF;
 
 }
 
@@ -266,8 +266,7 @@ a:hover {
       border-radius: 50%;
     }
     .cta-section {
-      background-image: radial-gradient(circle at top left, #e0f4fa 0%, #ffffff 100%);
-      transition: background-color 0.3s ease;
+	background-color: #F1F1F1;
     }
 
     .timeline {
