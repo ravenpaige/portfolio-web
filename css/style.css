@@ -41,6 +41,24 @@ section.container {
   margin-bottom: 2rem;
 }
 
+pre code {
+    background-color: #f8f9fa;
+    border: 1px solid #dee2e6;
+    border-radius: 0.5rem;
+    padding: 1rem;
+    display: block;
+    white-space: pre-wrap;
+}
+.copy-btn {
+    position: absolute;
+    top: 0.5rem;
+    right: 1rem;
+}
+.code-container {
+    position: relative;
+    margin-bottom: 2rem;
+}
+
 /* === Enhanced Navbar Styling === */
 .navbar {
   background-color: #ffffff;
