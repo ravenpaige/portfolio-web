@@ -1,0 +1,172 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Learn why AI tools like ChatGPT sometimes produce wrong or misleading answers—and how you can reduce hallucinations through better prompting techniques." />
+  <meta property="og:title" content="Why AI Gets Things Wrong — and What You Can Do About It" />
+  <meta property="og:description" content="Five practical ways to reduce hallucinations when using language models like ChatGPT." />
+  <meta property="og:image" content="images/gr8ux1-logo.png" />
+  <meta property="og:url" content="https://gr8ux.com/articles/ai-wrong-answers.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <title>Why AI Gets Things Wrong — and What You Can Do About It</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="/css/style.css" rel="stylesheet" />
+</head>
+<body>
+<div class="brand-stripe"></div>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">
+  <img src="images/gr8ux1-logo.png" alt="GR8 UX Creation logo" height="40">
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+      aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto">
+
+        <!-- Portfolio Dropdown -->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="portfolioDropdown" role="button" data-bs-toggle="dropdown"
+            aria-expanded="false">
+            Portfolio
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="portfolioDropdown">
+            <li class="active"><a class="dropdown-item" href="portfolio-featured.html"><strong>Featured Projects</strong></a></li>
+<li><a class="dropdown-item" href="portfolio-ux.html">UX + Forms</a></li>
+<li><a class="dropdown-item" href="portfolio-tech-writing.html">Tech Writing</a></li>
+<li><a class="dropdown-item" href="portfolio-webdev.html">Web Dev</a></li>
+<li><a class="dropdown-item" href="portfolio-marketing.html">Marketing + PR</a></li>
+              <li><a class="dropdown-item" href="portfolio-projects.html">Projects</a></li>
+          </ul>
+        </li>
+
+        <!-- Other nav items -->
+        <li class="nav-item"><a class="nav-link" href="https://effectiveink.blogspot.com/">Blog</a></li>
+        <li class="nav-item"><a class="nav-link" href="freelance.html">Freelance Services</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <header class="container py-4">
+    <h1 class="display-4 text-center">GR8UX</h1>
+    <p class="lead text-center"><strong>Experience Matters&nbsp;</strong></p>
+
+  </header>
+  <main class="container my-5">
+    <article>
+      <h1 class="display-6 text-center fw-semibold">Why AI Gets Things Wrong — and What You Can Do About It</h1>
+      <p>AI tools are amazing — until they aren’t.</p>
+      <p>You ask a simple question, and the answer comes back fast and maybe sounds fine at first, but when you really read it, it's wrong. Maybe just slightly wrong, or maybe hilariously wrong, but it's enough to make you look bad or maybe even cause real trouble.</p>
+      <p>This is known as <strong>hallucination.</strong> When an AI provides an answer that sounds plausible but is factually incorrect, it’s not lying, and it’s not malfunctioning. It’s also not verifying facts or checking sources. Instead, it's simply completing a pattern based on language it has seen before. In other words, it's <em><strong>guessing.</strong></em></p>
+     
+        <p>You can reduce the likelihood of this happening by making sure your instructions to the AI are as unabiguous as possible. And that means carefully wording each prompt you give to your AI model.</p>
+      <p>Here are five common causes of AI hallucinations that you can control — and the simple steps needed to prevent them from happening. With just a little more thought and some careful word choices, you can help AI give you answers that are much closer to what you actually need.</p>
+
+      <h2>Be Specific or Be Surprised</h2>
+      <h3><em>The Case Against Vague Prompts</em></h3>
+      <p>Imagine saying to someone, “Tell me about dolphins.” Without more information, the request is open to interpretation. Are you interested in biology? Communication behaviors? Cultural symbolism? A joke?</p>
+      <p>AI language models face the same problem — but without the benefit of tone, body language, or shared context. A vague or ambiguous question leaves too much room for the model to fill in blanks, and that’s where hallucinations often begin.</p>
+      <h4>✅ What You Can Do</h4>
+      <blockquote><strong>Instead of this:</strong> “Tell me about dolphins.”</blockquote>
+      <blockquote><strong>Use this: </strong>“List 3 unique communication behaviors used by bottlenose dolphins, with short explanations of how researchers discovered them.”</blockquote>
+
+      <h2>Avoid Conflicting Instructions</h2>
+      <h3><em>Why Mixed Goals Can Blur the Response</em></h3>
+      <p>AI tools respond best when the task is clearly defined. But when a prompt contains two or more goals that pull in different directions — even if they aren’t true contradictions — the result can be confusing, shallow, or off-target.</p>
+      <blockquote>“Summarize this article briefly, but include all the important details.”</blockquote>
+      <p>These are not logically contradictory instructions — a skilled writer might balance them well — but <strong>language models don't always know which part of the request matters most</strong>.</p>
+      <h4>✅ What You Can Do</h4>
+        <blockquote><strong>Instead of this:</strong> “Summarize this article briefly, but include all the important details.”</blockquote>
+        <blockquote><strong>Use these: </strong></blockquote>
+      <ol><li>“Summarize the article in 3 bullet points.”</li><li>“Expand on each point with specific technical details.”</li></ol>
+
+      <h2>Ask Only What It Can Know</h2>
+      <h3><em>Avoid Prompts That Require Private, Future, or Missing Information</em></h3>
+      <p>Despite how it sounds, a language model doesn’t actually know things. It doesn’t “look up” answers or “think through” problems. Instead, it generates responses by predicting which words are most likely to follow your prompt — based on patterns in the data it was trained on.</p>
+
+<p>That training data includes a massive portion of the internet, but it does not include everything. Most models don’t have access to current news, personal data, or private databases. They also don’t know your specific situation unless you tell them, and they can't' retrieve real-time information unless they are connected to outside tools or APIs by the AI designer (or by a user-controlled switch provided by the AI designer).</p>
+
+<p>If you ask about something highly specific, recent, or personal (like what someone said in a meeting yesterday, or the contents of your inbox) the model will still respond, but it won’t be drawing from facts. It will be guessing based on similar patterns it has seen elsewhere. That’s how hallucinations happen.</p>
+      <h4>✅ What You Can Do</h4>
+        <blockquote><strong>Instead of this:</strong> “What meeting did Mary remind me about in the that long email thread I got today.”</blockquote>
+        <blockquote><strong>Use this: </strong> [Upload or copy and paste contents of email] "Here is the text from a long email. Locate and display the meeting information that Mary Smith provided in this email."</blockquote>
+
+
+      <h2>Divide and Conquer</h2>
+      <h3><em>Breaking Down Complex Requests Reduces Confusion and Error</em></h3>
+        <p>When you try to do too much in a single prompt, the results often suffer.</p>
+
+<p>Language models are good at following clear, bounded instructions. But when a prompt includes multiple objectives — or embeds an entire project’s worth of logic into one sentence — the model may gloss over important steps, skip details, or misinterpret your priorities.</p>
+
+<p>For example:</p>
+
+
+      <blockquote>“Write a summary of this 2,000-word report, then turn it into a LinkedIn post, and also extract key data points to include in a table.”</blockquote>
+        <p>The AI will try. But unless you’ve used a highly specialized workflow tool, the result is likely to be uneven: Perhaps an okay summary, an awkward post, and a confusing attempt at a table.</p>
+
+<p>It’s not because the model is stupid, but it <em>is</em> overwhelmed. It’s because you’ve asked it to do multiple things that require different tones, formats, and levels of detail — all at once, with no intermediate steps or feedback.</p>
+      <h4>✅ What You Can Do</h4>
+<p>Instead of treating the model like a mind-reader or multi-tool, treat it like a collaborator with a short attention span.</p>
+        
+        <blockquote><strong>Instead of this:</strong> “Write a summary of this 2,000-word report, then turn it into a LinkedIn post, and also extract key data points to include in a table.”</blockquote>
+        <blockquote><strong>Use these: </strong></blockquote>
+      <ol><li>"Summarize this report in 3-5 bullet points."</li><li>"Write a LinkedIn post that shares these findings with a professional audience."</li><li>"Create a table showing the 3 key metrics mentioned in the report, with labels and definitions."</li></ol>
+
+      <h2>AI’s Memory Problem Is Yours Too</h2>
+      <h3><em>Don’t Assume It Knows What You Just Said</em></h3>
+      <p>Language models like ChatGPT may seem like they remember your conversation — and in some tools, they do maintain short-term memory during a session. But even then, the memory is limited.</p>
+
+<p>In most cases, the model doesn’t actually “know” what you said earlier unless your current prompt includes that information. It can’t recall your first question from five turns ago unless it’s still within the model’s <strong>token limit</strong> (a type of short-term memory storage where older information is continuously erased as new information is added). And even if the information is still technically available, AI may not treat it as important unless you repeat or reference that information directly.</p>
+
+<p>In AI models that don't have memory at all (or where memory is disabled), each new prompt is treated like a blank slate. So if you build a complex conversation on unstated assumptions, the model might drop context, lose track of what matters, or give answers that seem detached from your earlier questions.</p>
+
+<p>This can feel like the AI is “forgetting” — but in reality, it never truly remembered in the first place.</p>
+      <h4>✅ What You Can Do</h4>
+        
+        <blockquote><strong>Instead of this:</strong> “Earlier I listed the 5 malfunctions I considered most important. Please analyze the diagnostics for each and provide a course of action”</blockquote>
+        <blockquote><strong>Do this: </strong></blockquote>
+      <ul><li>Treat each prompt as if you’re giving instructions to someone who just walked into the room.<br>"Analyze the diagnostics for malfunction #2: Error Codes 12B and X12F."</li>
+          <li>If something is important, repeat it or restate it, especially if your conversation is more than a few messages long.<br>"Note that an Error Code XX200 indicates the unit is unrepairable, so no course of action is required."</li>
+        <li>Use numbered steps or summaries when working through a multi-step process:<br>“So far we've analyzed the diagnostic for Malfunction #3. Let's create the course of action for that malfunction now.”</li>
+
+<li>And if you’re switching topics, say so:<br>
+  
+  “New topic: Now I’d like help writing a thank-you note.”
+</li></ul>
+<p>This kind of scaffolding helps the model stay on track, and reminds you that the responsibility for managing context isn’t something you can fully delegate yet.</p>
+
+      <h2>Conclusion: Clear Prompts, Better Answers</h2>
+      <p>AI tools have made it easier than ever to generate information quickly, but speed doesn’t always equal accuracy. When language models hallucinate, the problem is rarely  malfunction. More often, it's a mismatch between how we ask and how the system works.</p>
+
+<p>By understanding a few key patterns, and then adjusting how you phrase your questions, you can reduce hallucinations, improve clarity, and get results that are not just faster, but more useful.</p>
+
+<p>Good prompting isn't magic. It's communication.</p>
+
+<p>And like any good conversation, clarity makes all the difference.</p>
+
+    </article>
+      <aside class="alert alert-info">
+        <strong>About AI Memory:</strong> Some AI tools — including the paid version of ChatGPT — offer what’s called “memory,” but it works differently than human memory. There are two main types: the short-term context window (like working memory) and persistent memory (a longer-term setting where the model can remember facts about you across chats). Even so, the model doesn’t truly understand or prioritize information the way people do. If something is important, it's still best to repeat it explicitly.
+      </aside>
+  </main>
+               <!-- Call to Action -->
+            <div class="text-center mt-5 py-5 cta-section border-top">
+      <h4 class="mb-3">Have a project or problem — small, complex, or somewhere in between?</h4>
+      <p class="lead">Let’s talk through it. Sometimes the hardest part is just getting started.</p>
+      <a href="contact.html" class="btn btn-primary btn-lg">Let's Discuss It</a>
+</div>
+        <!-- /Call to Action -->
+
+  <footer class="text-center py-4">
+    <p>&copy; 2025 GR8UX. All rights reserved.</p>
+  </footer>
+</body>
+</html>
