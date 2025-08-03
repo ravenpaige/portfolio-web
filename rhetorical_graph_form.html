@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rhetorical Quadrilateral Builder</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-light">
+  <div class="container py-5">
+    <h1 class="mb-4">Rhetorical Quadrilateral Builder</h1>
+
+    <div class="alert alert-warning">
+      <strong>Note:</strong> <br>
+      <ul class="mb-0">
+        <li><strong>"Purpose"</strong> is difficult to normalize. It may shift across contexts or remain implicit. Treat it as a working hypothesis.</li>
+        <li><strong>Context matters.</strong> Words like "duck" may carry multiple meanings depending on attention and surrounding syntax. Add clarifying notes when ambiguity exists.</li>
+      </ul>
+    </div>
+
+    <form id="rhetoricalForm">
+      <div class="mb-3">
+        <label for="sentence" class="form-label">Sentence</label>
+        <input type="text" class="form-control" id="sentence" placeholder="Enter your sentence">
+      </div>
+
+      <div class="row mb-3">
+        <div class="col">
+          <label class="form-label">Author</label>
+          <input type="text" class="form-control" id="author">
+        </div>
+        <div class="col">
+          <label class="form-label">Audience</label>
+          <input type="text" class="form-control" id="audience">
+        </div>
+        <div class="col">
+          <label class="form-label">Subject</label>
+          <input type="text" class="form-control" id="subject">
+        </div>
+        <div class="col">
+          <label class="form-label">Purpose</label>
+          <input type="text" class="form-control" id="purpose">
+        </div>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Context Notes (optional)</label>
+        <textarea class="form-control" id="contextNotes" rows="2" placeholder="Note potential ambiguities or multiple meanings here..."></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Nodes (JSON format)</label>
+        <textarea class="form-control" id="nodes" rows="6" placeholder='[{"id":"fox", "type":"Subject"}, {"id":"quick", "type":"Modifier", "modifies":"fox", "function":"Tempo"}]'></textarea>
+      </div>
+
+      <div class="mb-3">
+        <label class="form-label">Edges (JSON format)</label>
+        <textarea class="form-control" id="edges" rows="6" placeholder='[{"from":"fox", "to":"quick"}, {"from":"fox", "to":"jumped"}]'></textarea>
+      </div>
+
+      <button type="submit" class="btn btn-primary">Generate JSON</button>
+    </form>
+
+    <div class="mt-5">
+      <h3>Output JSON</h3>
+      <pre id="outputJson" class="bg-white p-3 border rounded"></pre>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('rhetoricalForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      const sentence = document.getElementById('sentence').value;
+      const author = document.getElementById('author').value;
+      const audience = document.getElementById('audience').value;
+      const subject = document.getElementById('subject').value;
+      const purpose = document.getElementById('purpose').value;
+      const contextNotes = document.getElementById('contextNotes').value;
+      const nodes = JSON.parse(document.getElementById('nodes').value);
+      const edges = JSON.parse(document.getElementById('edges').value);
+
+      const result = {
+        metadata: {
+          sentence: sentence,
+          source: "user-input",
+          timestamp: new Date().toISOString(),
+          contextNotes: contextNotes
+        },
+        quadrilateral: {
+          author: author,
+          audience: audience,
+          subject: subject,
+          purpose: purpose
+        },
+        nodes: nodes,
+        edges: edges
+      };
+
+      document.getElementById('outputJson').textContent = JSON.stringify(result, null, 2);
+    });
+  </script>
+</body>
+</html>
