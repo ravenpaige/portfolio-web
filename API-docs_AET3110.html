@@ -1,0 +1,431 @@
+<!doctype html>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AE Techron 3110.net – Modernized Reference + Cookbook</title>
+  <!-- Tailwind via CDN for quick preview. Replace with your build pipeline if desired. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Print-friendly styles */
+    @media print {
+      .no-print { display: none !important; }
+      .print-mt { margin-top: 0 !important; }
+      body { font-size: 11pt; }
+      pre, code { page-break-inside: avoid; }
+      a[href^="#"]::after { content: ""; }
+    }
+
+    /* Simple code tabs */
+    .code-tabs [role="tab"]{ @apply px-3 py-1 rounded-md text-sm font-medium cursor-pointer; }
+    .code-tabs [role="tab"][aria-selected="true"]{ @apply bg-slate-200; }
+    .prose pre { @apply bg-slate-900 text-slate-100 p-4 rounded-xl overflow-auto; }
+    .callout { @apply border-l-4 rounded-md px-3 py-2 my-3; }
+    .callout-info { @apply border-blue-400 bg-blue-50; }
+    .callout-warn { @apply border-amber-400 bg-amber-50; }
+    .callout-ok { @apply border-emerald-400 bg-emerald-50; }
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+    
+  <!-- Top bar -->
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <span class="inline-block w-2.5 h-2.5 rounded-full bg-emerald-500"></span>
+        <h1 class="text-sm sm:text-base font-semibold">AE Techron 3110.net – Modernized Reference + Cookbook</h1>
+      </div>
+      <nav class="no-print hidden sm:flex items-center gap-3 text-sm">
+        <a href="#downloads" class="px-3 py-1 rounded-md border border-slate-200 hover:bg-slate-50">Downloads</a>
+        <a href="#" class="px-3 py-1 rounded-md border border-slate-200 hover:bg-slate-50" onclick="window.print()">Print</a>
+      </nav>
+    </div>
+  </header>
+
+  <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-[260px,1fr] gap-8 px-4 sm:px-6 lg:px-8 py-8">
+    <!-- Sidebar -->
+    <aside class="no-print lg:sticky lg:top-16 self-start hidden lg:block">
+      <nav class="text-sm leading-6">
+        <p class="uppercase tracking-wide text-slate-400 mb-2">Contents</p>
+        <ol class="space-y-3">
+          <li><a href="#intro" class="hover:text-emerald-700">Overview</a></li>
+          <li>
+            <span class="font-semibold">Modernized Reference</span>
+            <ol class="pl-4 mt-1 space-y-2 text-slate-600">
+              <li><a href="#ref-setup" class="hover:text-emerald-700">Overview & Setup</a></li>
+              <li><a href="#ref-appconfig" class="hover:text-emerald-700">App.Config Settings</a></li>
+              <li><a href="#ref-core" class="hover:text-emerald-700">Core Properties & Methods</a></li>
+              <li><a href="#ref-control" class="hover:text-emerald-700">Control Operations</a></li>
+              <li><a href="#ref-files" class="hover:text-emerald-700">File Operations</a></li>
+            </ol>
+          </li>
+          <li>
+            <span class="font-semibold">Cookbook Guides</span>
+            <ol class="pl-4 mt-1 space-y-2 text-slate-600">
+              <li><a href="#cb-currentstate" class="hover:text-emerald-700">Read Current State</a></li>
+              <li><a href="#cb-loadrun" class="hover:text-emerald-700">Load a Test & Run It</a></li>
+            </ol>
+          </li>
+          <li><a href="#downloads" class="hover:text-emerald-700">Downloads</a></li>
+        </ol>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="prose prose-slate max-w-none print-mt">
+      <!-- Intro -->
+      <section id="intro">
+        <h2>Overview</h2>
+        <p>
+          This portfolio sample demonstrates a two-part documentation upgrade for the AE Techron <strong>3110.net</strong> device API:
+          <em>Modernized Reference</em> (clean, accurate, up-to-date) and an accompanying <em>Developer Cookbook</em> (task-oriented how-tos with runnable code).
+        </p>
+        <div class="not-prose grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+          <div class="p-4 rounded-xl border border-slate-200">
+            <p class="uppercase text-slate-500 text-xs mb-2">Skills demonstrated</p>
+            <ul class="list-disc pl-4">
+              <li>API reference editing & modernization</li>
+              <li>Task-oriented guide design (DX)</li>
+              <li>Multi-language examples (C#)</li>
+              <li>Information architecture & nav design</li>
+              <li>Print-ready PDF packaging</li>
+            </ul>
+          </div>
+          <div class="p-4 rounded-xl border border-slate-200">
+            <p class="uppercase text-slate-500 text-xs mb-2">Project context</p>
+            <ul class="list-disc pl-4">
+              <li>Real device: AE Techron 3110/3110A Standards Waveform Generator</li>
+              <li>Transport: TCP over LAN via .NET class library</li>
+              <li>Audience: test engineers, system integrators</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Modernized Reference -->
+      <section id="ref-setup">
+        <h2>Modernized Reference</h2>
+        <h3>Overview &amp; Setup</h3>
+        <p>
+          The <strong>3110.net API</strong> enables remote control of 3110/3110A units over a LAN using TCP sockets.
+          The distribution includes a <code>RemoteControlClient.dll</code> class library and an example utility with source code.
+        </p>
+        <h4>Integration flow</h4>
+        <p>Your App → <code>RemoteControlClient.dll</code> → 3110/3110A (TCP, port 8182)</p>
+        <h4>Project requirements</h4>
+        <ul>
+          <li>Add a reference to <code>RemoteControlClient.dll</code> (include <code>.deps.json</code> and <code>.pdb</code>).</li>
+          <li>Default TCP port: <strong>8182</strong>.</li>
+          <li>Use a static IP or DHCP reservation for the device.</li>
+          <li>Recommended <code>ResponseTime</code> ≥ <strong>150 ms</strong> for reliable polling.</li>
+          <li>If your code uses <code>System.IO.Directory</code>, alias the API type:
+            <pre><code class="language-csharp">using Directory = _3110A_Remote_Control.RemoteControlClient.Directory;</code></pre>
+          </li>
+        </ul>
+      </section>
+
+      <section id="ref-appconfig">
+        <h3>App.Config Settings</h3>
+        <table>
+          <thead>
+            <tr><th>Name</th><th>Type</th><th>Default</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>ResponseTime</td><td>int</td><td>200</td><td>Wait time (ms) for the 3110 to respond; values &lt;150 ms may be unreliable.</td></tr>
+            <tr><td>IPaddress</td><td>string</td><td>10.123.8.44</td><td>IP address of the 3110 unit.</td></tr>
+            <tr><td>DebugEnabled</td><td>bool</td><td>false</td><td>Enable debug logging in the example utility.</td></tr>
+          </tbody>
+        </table>
+        <p>Example:</p>
+        <pre><code class="language-xml">&lt;_3110A_Remote_Control.Properties.Settings&gt;
+  &lt;setting name="ResponseTime" serializeAs="String"&gt;
+    &lt;value&gt;200&lt;/value&gt;
+  &lt;/setting&gt;
+  &lt;setting name="IPaddress" serializeAs="String"&gt;
+    &lt;value&gt;10.123.8.44&lt;/value&gt;
+  &lt;/setting&gt;
+  &lt;setting name="DebugEnabled" serializeAs="String"&gt;
+    &lt;value&gt;false&lt;/value&gt;
+  &lt;/setting&gt;
+&lt;/_3110A_Remote_Control.Properties.Settings&gt;</code></pre>
+      </section>
+
+      <section id="ref-core">
+        <h3>Core Properties &amp; Methods</h3>
+        <h4>CurrentState (Property)</h4>
+        <p>Returns the device’s read-only <code>State</code> structure.</p>
+        <table>
+          <thead>
+            <tr><th>Field</th><th>Type</th><th>Description</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Stopped</td><td>bool</td><td>True if player is stopped.</td></tr>
+            <tr><td>SystemStatus</td><td>string</td><td><code>IDLE</code>, <code>PAUSED</code>, or <code>RUN</code>.</td></tr>
+            <tr><td>Sequence</td><td>string</td><td>Currently playing sequence number.</td></tr>
+            <tr><td>PlayingSegment</td><td>string</td><td>Current segment number.</td></tr>
+            <tr><td>SystemOffset</td><td>string</td><td>Value from Settings → System Calibration.</td></tr>
+            <tr><td>SystemGain</td><td>string</td><td>Value from Settings → System Calibration.</td></tr>
+            <tr><td>AmpStatus</td><td>string</td><td>Status of attached amplifier (returns <code>Run</code> if none).</td></tr>
+            <tr><td>SerialNumber</td><td>string</td><td>Serial number of the connected unit.</td></tr>
+          </tbody>
+        </table>
+
+        <h4>RequestCurrentState() (Method)</h4>
+        <pre><code class="language-csharp">public State RequestCurrentState()</code></pre>
+        <p>Queries the 3110 and populates <code>CurrentState</code>. Use for status UIs; avoid over-polling.</p>
+
+        <h4>RequestDirList(pathName) (Method)</h4>
+        <pre><code class="language-csharp">public List&lt;Directory&gt; RequestDirList(string pathName)</code></pre>
+        <p>Returns the contents of the given directory; start from <code>RootNode</code>.</p>
+
+        <h4>Disconnect() (Method)</h4>
+        <p>Stops client communication with the device. Call before exiting your app.</p>
+      </section>
+
+      <section id="ref-control">
+        <h3>Control Operations</h3>
+        <table>
+          <thead>
+            <tr><th>Operation</th><th>Description</th><th>Conditions</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Connect</td><td>Enter IP address and connect to the 3110.</td><td>Device powered, network reachable.</td></tr>
+            <tr><td>Play</td><td>Starts the loaded test.</td><td>Requires a loaded file.</td></tr>
+            <tr><td>Pause</td><td>Drops output to user-selected default voltage; <em>Play while Paused</em> resumes at the start of the current segment.</td><td>File loaded; status RUN.</td></tr>
+            <tr><td>Stop</td><td>Stops playback.</td><td>Any running or paused test.</td></tr>
+            <tr><td>Disconnect</td><td>Ends TCP session.</td><td>—</td></tr>
+          </tbody>
+        </table>
+        <div class="callout callout-warn">
+          <strong>Caution:</strong> Changing the device’s LAN end-of-line (EOL) setting can break the client.
+        </div>
+      </section>
+
+      <section id="ref-files">
+        <h3>File Operations</h3>
+        <ul>
+          <li><strong>List Files:</strong> Build the device’s file structure once at initialization (≈50 seconds).</li>
+          <li><strong>Load File:</strong> Select a test file and load it; the front panel confirms the load.</li>
+          <li><strong>Run Loaded File:</strong> After loading, <em>Play</em>, <em>Pause</em>, and <em>Stop</em> behave as on the front panel.</li>
+        </ul>
+      </section>
+
+      <!-- Cookbook -->
+      <section id="cb-currentstate">
+        <h2>Cookbook: Read the 3110’s Current State</h2>
+        <p class="text-sm text-slate-500">Goal → Prereqs → Steps → Gotchas → Validation → Full example</p>
+
+        <h3>Use this when</h3>
+        <ul>
+          <li>You need to poll for status (RUN/PAUSED/IDLE, sequence, segment, gain/offset, amp status, serial number).</li>
+          <li>You want to drive UI updates or gate actions (e.g., enable Play only when allowed).</li>
+        </ul>
+
+        <h3>Prereqs</h3>
+        <ul>
+          <li>3110/3110A on the same LAN; default TCP port 8182.</li>
+          <li>Static IP or reservation recommended.</li>
+          <li>Project references <code>RemoteControlClient.dll</code> (include <code>.deps.json</code>/<code>.pdb</code>).</li>
+          <li>Alias <code>Directory</code> type if you use <code>System.IO.Directory</code>.</li>
+        </ul>
+
+        <h3>Steps</h3>
+        <ol>
+          <li>
+            <p><strong>Connect to the device</strong></p>
+            <pre><code class="language-csharp">var client = new _3110A_Remote_Control.RemoteControlClient("10.123.8.44", 8182);
+client.ResponseTime = 200; // ≥150 ms recommended</code></pre>
+          </li>
+          <li>
+            <p><strong>Get the current state</strong></p>
+            <pre><code class="language-csharp">var state = client.RequestCurrentState();
+Console.WriteLine($"Status: {state.SystemStatus} | Seq: {state.Sequence} | Seg: {state.PlayingSegment}");
+Console.WriteLine($"Gain: {state.SystemGain} | Offset: {state.SystemOffset} | SN: {state.SerialNumber}");</code></pre>
+          </li>
+          <li>
+            <p><strong>Drive UI logic</strong></p>
+            <pre><code class="language-csharp">var isStopped = state.Stopped;
+var canPlay   = isStopped || state.SystemStatus == "PAUSED";</code></pre>
+          </li>
+          <li>
+            <p><strong>Poll on an interval</strong></p>
+            <pre><code class="language-csharp">var timer = new System.Timers.Timer(500);
+timer.Elapsed += (_, __) => {
+  try {
+    var s = client.RequestCurrentState();
+    UpdateUiFromState(s); // your UI update method
+  } catch (Exception ex) {
+    ShowTransientWarning($"State poll failed: {ex.Message}");
+  }
+};
+timer.AutoReset = true;
+timer.Start();</code></pre>
+          </li>
+          <li>
+            <p><strong>Clean up</strong></p>
+            <pre><code class="language-csharp">timer?.Stop();
+client.Disconnect();</code></pre>
+          </li>
+        </ol>
+
+        <h3>Gotchas</h3>
+        <ul>
+          <li>Do not change the device’s LAN EOL setting (breaks the client).</li>
+          <li>Use a single timer; don’t allow overlapping polls.</li>
+          <li>Prefer static IP or reservation; DHCP churn causes confusion.</li>
+          <li>Build the file tree once at startup; it can take ~50s.</li>
+        </ul>
+
+        <h3>Validation checklist</h3>
+        <ul>
+          <li><code>SerialNumber</code> matches front panel.</li>
+          <li><code>SystemStatus</code> mirrors the front panel state.</li>
+          <li>During run, <code>Sequence</code> and <code>PlayingSegment</code> change over time.</li>
+        </ul>
+
+        <h3>Full example (Console)</h3>
+        <pre><code class="language-csharp">using System;
+using System.Timers;
+using Directory = _3110A_Remote_Control.RemoteControlClient.Directory;
+
+class Program
+{
+  static _3110A_Remote_Control.RemoteControlClient client;
+  static Timer poll;
+
+  static void Main()
+  {
+    client = new _3110A_Remote_Control.RemoteControlClient("10.123.8.44", 8182)
+    { ResponseTime = 200 };
+
+    poll = new Timer(500);
+    poll.Elapsed += (_, __) =>
+    {
+      try
+      {
+        var s = client.RequestCurrentState();
+        Console.WriteLine($"{DateTime.Now:HH:mm:ss} | {s.SystemStatus} | Seq {s.Sequence} | Seg {s.PlayingSegment} | Gain {s.SystemGain} | Off {s.SystemOffset}");
+      }
+      catch (Exception ex)
+      {
+        Console.Error.WriteLine($"Poll error: {ex.Message}");
+      }
+    };
+    poll.AutoReset = true;
+    poll.Start();
+
+    Console.WriteLine("Polling. Press ENTER to quit.");
+    Console.ReadLine();
+
+    poll.Stop();
+    client.Disconnect();
+  }
+}</code></pre>
+      </section>
+
+      <section id="cb-loadrun">
+        <h2>Cookbook: Load a Test and Run It (with Pause Default Voltage)</h2>
+        <p class="text-sm text-slate-500">Goal → Prereqs → Steps → Gotchas → Validation</p>
+
+        <h3>Use this when</h3>
+        <ul>
+          <li>You want to select a stored test on the 3110/3110A, run it, and control Play / Pause / Stop from software.</li>
+          <li>You need Pause to hold a user‑selected default voltage and resume cleanly.</li>
+        </ul>
+
+        <h3>Prereqs</h3>
+        <ul>
+          <li>Device powered and reachable on the LAN.</li>
+          <li>Static IP or reservation recommended.</li>
+          <li>Project references <code>RemoteControlClient.dll</code>.</li>
+        </ul>
+
+        <h3>Concept</h3>
+        <p>
+          On first connect, build the device file tree (~50s). Then select and load a test file; Play/Pause/Stop function as on the front panel. When Paused, output drops to the default voltage; Play while Paused resumes at the start of the current segment.
+        </p>
+
+        <h3>Steps</h3>
+        <ol>
+          <li>
+            <p><strong>Connect and initialize</strong></p>
+            <pre><code class="language-csharp">var client = new _3110A_Remote_Control.RemoteControlClient("10.123.8.44", 8182);
+client.ResponseTime = 200; // tune per network</code></pre>
+            <div class="callout callout-info"><strong>Tip:</strong> Build the file structure once at startup; avoid rebuilding on every action.</div>
+          </li>
+          <li>
+            <p><strong>(Optional) List files programmatically</strong></p>
+            <pre><code class="language-csharp">var root = client.RootNode;                       // read-only root
+var entries = client.RequestDirList(root.path);   // List&lt;Directory&gt;
+// Traverse children to find your test file, then load via your own routine</code></pre>
+          </li>
+          <li>
+            <p><strong>Load a test (example utility workflow)</strong></p>
+            <ul>
+              <li>Open <em>Files → List Files</em> to view the TreeView.</li>
+              <li>Navigate to the desired test file and click <em>Load File</em>.</li>
+              <li>Confirm on the device front panel; controls are now enabled.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>Run and control playback</strong></p>
+            <ul>
+              <li><strong>Play</strong>: starts the test (from idle or paused).</li>
+              <li><strong>Pause</strong>: output drops to your default voltage; <em>Play while Paused</em> resumes at the start of the current segment.</li>
+              <li><strong>Stop</strong>: halts the test; select and load another file as needed.</li>
+            </ul>
+          </li>
+          <li>
+            <p><strong>(Optional) Hold DC at end of test</strong></p>
+            <p>Add a final segment with the required DC level and set its trigger to <em>True</em> so it persists until triggered off.</p>
+          </li>
+        </ol>
+
+        <h3>Validation checklist</h3>
+        <ul>
+          <li>Front panel shows the selected file after <em>Load File</em>.</li>
+          <li><em>Play</em> runs; <em>Pause</em> holds your default voltage; <em>Play</em> resumes at segment start.</li>
+        </ul>
+
+        <h3>Gotchas</h3>
+        <ul>
+          <li>Controls do nothing? Ensure a file is loaded first.</li>
+          <li>Slow startup UI? That’s the initial file tree build (~50s). Do it once.</li>
+          <li>Connection flakes/timeouts? Use <code>ResponseTime</code> ≥ 150 ms; avoid DHCP churn.</li>
+          <li>Do not alter the device LAN EOL; it breaks the client.</li>
+        </ul>
+      </section>
+
+      <!-- Downloads -->
+      <section id="downloads">
+        <h2>Downloads</h2>
+        <p class="text-sm text-slate-500">PDFs match this page’s typography and section order.</p>
+        <div class="not-prose grid sm:grid-cols-3 gap-3">
+          <a class="block border border-slate-200 rounded-xl p-4 hover:bg-slate-50" href="#" aria-disabled="true">
+            <div class="font-semibold">Modernized Reference (PDF)</div>
+            <div class="text-xs text-slate-500">Coming soon</div>
+          </a>
+          <a class="block border border-slate-200 rounded-xl p-4 hover:bg-slate-50" href="#" aria-disabled="true">
+            <div class="font-semibold">Developer Cookbook (PDF)</div>
+            <div class="text-xs text-slate-500">Coming soon</div>
+          </a>
+          <a class="block border border-slate-200 rounded-xl p-4 hover:bg-slate-50" href="#" aria-disabled="true">
+            <div class="font-semibold">Combined (PDF)</div>
+            <div class="text-xs text-slate-500">Coming soon</div>
+          </a>
+        </div>
+      </section>
+
+      <footer class="mt-12 pt-6 border-t border-slate-200 text-sm text-slate-500">
+        © <span id="year"></span> Terri Clark — gr8ux.com — Portfolio Sample
+      </footer>
+    </main>
+  </div>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+

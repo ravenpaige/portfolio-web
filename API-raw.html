@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AE Techron 3110.net – Modernized Reference + Cookbook</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @media print {
+      .no-print { display: none !important; }
+      .print-mt { margin-top: 0 !important; }
+      body { font-size: 11pt; }
+      pre, code { page-break-inside: avoid; }
+    }
+    .prose pre { @apply bg-slate-900 text-slate-100 p-4 rounded-xl overflow-auto; }
+    .callout { @apply border-l-4 rounded-md px-3 py-2 my-3; }
+    .callout-info { @apply border-blue-400 bg-blue-50; }
+    .callout-warn { @apply border-amber-400 bg-amber-50; }
+  </style>
+</head>
+<body class="bg-white text-slate-800">
+  <header class="sticky top-0 z-40 bg-white/80 backdrop-blur border-b border-slate-200">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-14 flex items-center justify-between">
+      <h1 class="text-sm sm:text-base font-semibold">AE Techron 3110.net – Modernized Reference + Cookbook</h1>
+      <nav class="no-print hidden sm:flex items-center gap-3 text-sm">
+        <a href="#downloads" class="px-3 py-1 rounded-md border border-slate-200 hover:bg-slate-50">Downloads</a>
+        <a href="#" class="px-3 py-1 rounded-md border border-slate-200 hover:bg-slate-50" onclick="window.print()">Print</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="prose prose-slate max-w-none print-mt px-4 sm:px-6 lg:px-8 py-8">
+    <section id="intro">
+      <h2>Overview</h2>
+        
+        <!-- BEFORE block: realistic raw engineering hand-off -->
+        <div class="callout callout-info">
+          <strong>Before (typical engineering hand‑off):</strong>
+          <p class="mt-2 text-sm">Realistic raw notes you might receive as the API doc writer. Your job is to normalize, clarify, and expand this into the reference + cookbook you see below.</p>
+          <div class="grid md:grid-cols-2 gap-4 not-prose mt-3">
+            <div class="border border-slate-200 rounded-lg p-3">
+              <div class="text-xs uppercase text-slate-500 mb-2">REST endpoint notes</div>
+              <pre><code>Endpoint: GET /v1/orders
+Purpose: returns order data
+Params:
+  id: string, required, order ID
+  expand: string, optional, include related items
+Returns:
+  200: order JSON
+  404: not found
+Sample:
+  curl -H "Authorization: Bearer &lt;token&gt;" \
+       "https://api.example.com/v1/orders?id=123&amp;expand=items"
+Auth: bearer token in header
+Notes:
+  - max 50 requests/minute
+  - items array may be empty</code></pre>
+            </div>
+            <div class="border border-slate-200 rounded-lg p-3">
+              <div class="text-xs uppercase text-slate-500 mb-2">Client library stub</div>
+              <pre><code>function getUser(userId) {
+  // GET /users/{id}
+  // Needs auth
+  // returns user object or error
+}
+
+// user object:
+// id: string
+// name: string
+// email: string
+// createdAt: timestamp</code></pre>
+            </div>
+          </div>
+          <p class="mt-3 text-sm">Scroll down to see the <em>After</em>: the Modernized Reference and the Developer Cookbook derived from inputs like these.</p>
+        </div>
+        
+      <p>This sample shows a two-part documentation upgrade: a Modernized Reference and a Developer Cookbook, plus a realistic “raw engineering spec” to illustrate the before/after.</p>
+
+      <h3>Before: Raw Engineering Spec</h3>
+      <pre><code>Endpoint: GET /v1/orders
+Purpose: returns order data
+Params:
+  id: string, required, order ID
+  expand: string, optional, include related items
+Returns:
+  200: order JSON
+  404: not found
+Sample:
+  curl https://api.example.com/v1/orders?id=123&expand=items
+Auth: bearer token in header
+Notes:
+  - max 50 requests/minute
+  - items array may be empty</code></pre>
+      <p class="text-sm text-slate-500">This is the kind of shorthand you might get directly from engineering: minimal context, inconsistent formatting, and missing real-world guidance.</p>
+    </section>
+
+    <section id="ref-setup">
+      <h2>Modernized Reference</h2>
+      <p>[Modernized reference content here...]</p>
+    </section>
+
+    <section id="cb-guides">
+      <h2>Developer Cookbook</h2>
+      <p>[Cookbook guides content here...]</p>
+    </section>
+
+    <section id="downloads">
+      <h2>Downloads</h2>
+      <ul>
+        <li>Modernized Reference (PDF)</li>
+        <li>Developer Cookbook (PDF)</li>
+        <li>Combined (PDF)</li>
+      </ul>
+    </section>
+  </main>
+</body>
+</html>
