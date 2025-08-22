@@ -7,20 +7,60 @@
   <!-- Lightweight, zero-build Bootstrap via CDN -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <style>
-    body { background: #0b0d10; color: #e6edf3; }
-    .muted { color: #9aa4ad; }
-    .card { background: #12151a; border-color: #1e232b; }
-    .badge-scope { background: #2b3340; }
-    a { color: #79b8ff; text-decoration: none; }
-    a:hover { text-decoration: underline; }
-    .pill { border-radius: 2rem; padding: .25rem .6rem; font-size: .8rem; }
-    .smallcaps { font-variant-caps: small-caps; letter-spacing: .04em; }
-    .hr { border-top: 1px solid #1e232b; opacity: .5; }
-    .disclaimer { font-size: .925rem; }
-    .kicker { font-size: .9rem; letter-spacing: .08em; color: #a2adb7; }
-    .entry h3 { font-size: 1.1rem; }
-    .entry dt { color: #9aa4ad; }
-  </style>
+/* === MIRA dark theme — accessible patch === */
+:root{
+  --bg:#0e1116;
+  --card:#121923;
+  --line:#243244;
+  --text:#e6edf3;
+  --muted:#b6c2cf;
+  --accent:#9ec6ff;
+  --pill:#2b3a4e;
+}
+html,body{
+  background:var(--bg); color:var(--text);
+  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+.container{ max-width: 960px; }
+
+h1{ font-size:1.75rem; margin-bottom:.25rem; }
+.kicker{ color:var(--muted); letter-spacing:.08em; }
+.disclaimer{ color:var(--muted); }
+
+a{ color:var(--accent); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  box-shadow:0 4px 16px rgba(0,0,0,.25);
+}
+.entry h3{ font-size:1.1rem; }
+
+.hr{ border-top:1px solid var(--line); opacity:.8; }
+
+.badge-scope{ background:var(--pill); color:var(--text); }
+.pill{
+  background:var(--pill); color:var(--text);
+  border:1px solid var(--line); border-radius:999px;
+  padding:.35rem .7rem; font-size:.85rem;
+}
+.pill:hover{ filter:brightness(1.08); text-decoration:none; }
+
+/* Label/value layout for the details */
+dl{ display:grid; grid-template-columns:180px 1fr; gap:.35rem 1rem; margin:0; }
+dt{ grid-column:1; color:var(--muted); }
+dd{ grid-column:2; margin:0; color:var(--text); }
+
+/* Mobile: stack labels */
+@media (max-width: 576px){
+  dl{ grid-template-columns:1fr; }
+  dt{ margin-top:.5rem; }
+}
+</style>
+
 </head>
 <body>
   <main class="container py-4">
@@ -81,7 +121,7 @@ Name one gate you hold (role, policy, habit). What is the smallest act of care y
     <section class="entry card mb-4">
       <div class="card-body">
         <div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2">
-          <h3 class="mb-1">Piece NN: <span class="text-info">Cages for the Innocents</span> <span class="muted fw-normal">(2024)</span></h3>
+          <h3 class="mb-1">Piece 01: <span class="text-info">Cages for the Innocents</span> <span class="muted fw-normal">(2024)</span></h3>
           <a class="pill" href="https://www.facebook.com/photo/?fbid=10104437033331505&set=a.10103901804080215" target="_blank" rel="noopener">View on artist site →</a>
   </div>
         <hr class="hr my-3" />
