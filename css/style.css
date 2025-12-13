@@ -299,6 +299,13 @@ a:hover {
     }
 .container.py-4 {
 }
+blockquote {
+	padding-left: 20px;
+	margin-right: 20px;
+	border-left: medium solid #1677A1;
+	margin-left: -20px;
+}
+
 
 
 
