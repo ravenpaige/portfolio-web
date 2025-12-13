@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MIRA · Joan Set (Text‑Only Study)</title>
+  <!-- Lightweight, zero-build Bootstrap via CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+/* === MIRA dark theme — accessible patch === */
+:root{
+  --bg:#0e1116;
+  --card:#121923;
+  --line:#243244;
+  --text:#e6edf3;
+  --muted:#b6c2cf;
+  --accent:#9ec6ff;
+  --pill:#2b3a4e;
+}
+html,body{
+  background:var(--bg); color:var(--text);
+  font:16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Inter,Arial,sans-serif;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+.container{ max-width: 960px; }
+
+h1{ font-size:1.75rem; margin-bottom:.25rem; }
+.kicker{ color:var(--muted); letter-spacing:.08em; }
+.disclaimer{ color:var(--muted); }
+
+a{ color:var(--accent); text-decoration:none; }
+a:hover{ text-decoration:underline; }
+
+.card{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:14px;
+  box-shadow:0 4px 16px rgba(0,0,0,.25);
+}
+.entry h3{ font-size:1.1rem; }
+
+.hr{ border-top:1px solid var(--line); opacity:.8; }
+
+.badge-scope{ background:var(--pill); color:var(--text); }
+.pill{
+  background:var(--pill); color:var(--text);
+  border:1px solid var(--line); border-radius:999px;
+  padding:.35rem .7rem; font-size:.85rem;
+}
+.pill:hover{ filter:brightness(1.08); text-decoration:none; }
+
+/* Label/value layout for the details */
+dl{ display:grid; grid-template-columns:180px 1fr; gap:.35rem 1rem; margin:0; }
+dt{ grid-column:1; color:var(--muted); }
+dd{ grid-column:2; margin:0; color:var(--text); }
+
+/* Mobile: stack labels */
+@media (max-width: 576px){
+  dl{ grid-template-columns:1fr; }
+  dt{ margin-top:.5rem; }
+}
+</style>
+
+</head>
+<body>
+  <main class="container py-4">
+    <header class="mb-4">
+      <h1 class="h3 mb-1">MIRA · Joan Set (Text‑Only Study)</h1>
+      <div class="kicker mb-2">Meta‑archetype readings with links — <span class="smallcaps">no images reproduced</span></div>
+      <div class="disclaimer muted">
+        All artworks © Joan [Last]. Linked for reference; images are <em>not</em> hosted or reproduced here. This page contains <strong>text‑only</strong> analysis and links to the artist’s own pages.
+      </div>
+      <div class="mt-3">
+        <span class="badge badge-scope pill">Consent‑first</span>
+        <span class="badge badge-scope pill">Text‑only</span>
+        <span class="badge badge-scope pill">Links to original</span>
+      </div>
+    </header>
+
+    <!-- HOW TO USE ---------------------------------------------------------
+      1) For each piece, fill in: Title, Year (if known), and the URL to Joan’s page.
+      2) Replace the placeholder text in the eight sections under <dl>.
+      3) Duplicate an .entry block to add more. Twenty starter slots are included below.
+      4) Keep credit note as-is. Do not paste any images.
+    ---------------------------------------------------------------------- -->
+
+    <!-- ENTRY TEMPLATE (copy for new items)
+    <section class="entry card mb-4">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2">
+          <h3 class="mb-1">Piece NN: <span class="text-info">Cages for the Innocents</span> <span class="muted fw-normal">(2024)</span></h3>
+          <a class="pill" href="https://www.facebook.com/photo/?fbid=10104437033331505&set=a.10103901804080215" target="_blank" rel="noopener">View on artist site →</a>
+  </div>
+        <hr class="hr my-3" />
+        <dl class="row mb-0">
+          <dt class="col-sm-3">The Gate (Mesh Between)</dt>
+          <dd class="col-sm-9">[Meta‑Archetype Name]</dd>
+          <dt class="col-sm-3">Threshold • Justice • Contact</dt>
+          <dd class="col-sm-9">[e.g., Creation • Memory • Threshold]</dd>
+          <dt class="col-sm-3">Liminal: bodies split by a lattice; authority frontal, visitor occluded; communication forced through a grid.</dt>
+          <dd class="col-sm-9">[e.g., liminal / ascending / descending / radiant center]</dd>
+          <dt class="col-sm-3">To expose asymmetry at points of contact and test whether power becomes care or hardens into control.</dt>
+          <dd class="col-sm-9">[What it does in a psyche/system]</dd>
+          <dt class="col-sm-3">olive-drab #556B2F, ochre #D3B16A, bone-white #E6E1D6, charcoal #1A1A1A, steel-grey #8A8F93, muted blue #5F7E9A</dt>
+          <dd class="col-sm-9">[Dominant hues; symbolic valence]</dd>
+          <dt class="col-sm-3">Chain-link mesh: the Control Lattice made literal; vision and touch atomized. - Guard’s emptied eyes / shaved line: role eclipses personhood; procedure as mask. - Blurred crowd beyond panes: lives reduced to rumor; bureaucracy as fog. - Phone/hand at jaw: contact throttled to sanctioned channels. - Rectangular frames: rooms inside rooms; nested custody.</dt>
+          <dd class="col-sm-9">[Key motifs, forms, gestures]</dd>
+          <dt class="col-sm-3">The Gate is the human face of systems. Its right function is stewardship and clear boundaries; its shadow is domination disguised as order. The mesh turns relationship into units of control; consent turns it back into relationship. The question here is not “Who wins?” but “Who decides, on what grounds, and how can that yes be revoked?”</dt>
+          <dd class="col-sm-9">[2–5 sentences: essence, tension, shadow]</dd>
+          <dt class="col-sm-3">Stand, hands open. Inhale: I meet you at the mesh.
+Exhale: I do not become the mesh.
+Name one gate you hold (role, policy, habit). What is the smallest act of care you can perform without breaking your duty? Do it. If you’re the one at the net, ask for the boundary in plain words and the path to revoke.</dt>
+          <dd class="col-sm-9">[Short guidance: what to contemplate or try]</dd>
+        </dl>
+      </div>
+    </section>
+    END TEMPLATE -->
+
+    <!-- 20 STARTER ENTRIES (fill or delete as needed) -->
+
+    <section class="entry card mb-4">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2">
+          <h3 class="mb-1">Piece 01: <span class="text-info">Cages for the Innocents</span> <span class="muted fw-normal">(2024)</span></h3>
+          <a class="pill" href="https://www.facebook.com/photo/?fbid=10104437033331505&set=a.10103901804080215" target="_blank" rel="noopener">View on artist site →</a>
+  </div>
+        <hr class="hr my-3" />
+        <dl class="row mb-0">
+          <dt class="col-sm-3">The Gate (Mesh Between)</dt>
+          <dd class="col-sm-9">[Meta‑Archetype Name]</dd>
+          <dt class="col-sm-3">Threshold • Justice • Contact</dt>
+          <dd class="col-sm-9">[e.g., Creation • Memory • Threshold]</dd>
+          <dt class="col-sm-3">Liminal: bodies split by a lattice; authority frontal, visitor occluded; communication forced through a grid.</dt>
+          <dd class="col-sm-9">[e.g., liminal / ascending / descending / radiant center]</dd>
+          <dt class="col-sm-3">To expose asymmetry at points of contact and test whether power becomes care or hardens into control.</dt>
+          <dd class="col-sm-9">[What it does in a psyche/system]</dd>
+          <dt class="col-sm-3">olive-drab #556B2F, ochre #D3B16A, bone-white #E6E1D6, charcoal #1A1A1A, steel-grey #8A8F93, muted blue #5F7E9A</dt>
+          <dd class="col-sm-9">[Dominant hues; symbolic valence]</dd>
+          <dt class="col-sm-3">Chain-link mesh: the Control Lattice made literal; vision and touch atomized. - Guard’s emptied eyes / shaved line: role eclipses personhood; procedure as mask. - Blurred crowd beyond panes: lives reduced to rumor; bureaucracy as fog. - Phone/hand at jaw: contact throttled to sanctioned channels. - Rectangular frames: rooms inside rooms; nested custody.</dt>
+          <dd class="col-sm-9">[Key motifs, forms, gestures]</dd>
+          <dt class="col-sm-3">The Gate is the human face of systems. Its right function is stewardship and clear boundaries; its shadow is domination disguised as order. The mesh turns relationship into units of control; consent turns it back into relationship. The question here is not “Who wins?” but “Who decides, on what grounds, and how can that yes be revoked?”</dt>
+          <dd class="col-sm-9">[2–5 sentences: essence, tension, shadow]</dd>
+          <dt class="col-sm-3">Stand, hands open. Inhale: I meet you at the mesh.
+Exhale: I do not become the mesh.
+Name one gate you hold (role, policy, habit). What is the smallest act of care you can perform without breaking your duty? Do it. If you’re the one at the net, ask for the boundary in plain words and the path to revoke.</dt>
+          <dd class="col-sm-9">[Short guidance: what to contemplate or try]</dd>
+        </dl>
+      </div>
+    </section>
+<section class="entry card mb-4">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2">
+          <h3 class="mb-1">1: <span class="text-info">Cages for the Innocents</span> <span class="muted fw-normal">(2024)</span></h3>
+          <a class="pill" href="https://www.facebook.com/photo/?fbid=10104437033331505&set=a.10103901804080215" target="_blank" rel="noopener">View on artist site →</a>
+        </div>
+        <hr class="hr my-3" />
+        <dl class="row mb-0">
+          <dt class="col-sm-3">Cages for the Innocents</dt>
+          <dd class="col-sm-9">[Injustice]</dd>
+          <dt class="col-sm-3">Shadow</dt>
+          <dd class="col-sm-9">[e.g., Creation • Memory • Threshold]</dd>
+          <dt class="col-sm-3">Position</dt>
+          <dd class="col-sm-9">[e.g., liminal / ascending / descending / radiant center]</dd>
+          <dt class="col-sm-3">Function</dt>
+          <dd class="col-sm-9">[What it does in a psyche/system]</dd>
+          <dt class="col-sm-3">Colors</dt>
+          <dd class="col-sm-9">[Dominant hues; symbolic valence]</dd>
+          <dt class="col-sm-3">Symbolism</dt>
+          <dd class="col-sm-9">[Key motifs, forms, gestures]</dd>
+          <dt class="col-sm-3">Meta‑Archetype Philosophy</dt>
+          <dd class="col-sm-9">[2–5 sentences: essence, tension, shadow]</dd>
+          <dt class="col-sm-3">Insight & Meditation</dt>
+          <dd class="col-sm-9">[Short guidance: what to contemplate or try]</dd>
+        </dl>
+      </div>
+    </section>
+    <!-- 01 -->
+    <section class="entry card mb-4">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2">
+          <h3 class="mb-1">Piece 01: <span class="text-info">Title</span> <span class="muted fw-normal">(Year)</span></h3>
+          <a class="pill" href="#" target="_blank" rel="noopener">View on artist site →</a>
+        </div>
+        <hr class="hr my-3" />
+        <dl class="row mb-0">
+          <dt class="col-sm-3">Name</dt><dd class="col-sm-9">—</dd>
+          <dt class="col-sm-3">Domain</dt><dd class="col-sm-9">—</dd>
+          <dt class="col-sm-3">Position</dt><dd class="col-sm-9">—</dd>
+          <dt class="col-sm-3">Function</dt><dd class="col-sm-9">—</dd>
+          <dt class="col-sm-3">Colors</dt><dd class="col-sm-9">—</dd>
+          <dt class="col-sm-3">Symbolism</dt><dd class="col-sm-9">—</dd>
+          <dt class="col-sm-3">Meta‑Archetype Philosophy</dt><dd class="col-sm-9">—</dd>
+          <dt class="col-sm-3">Insight & Meditation</dt><dd class="col-sm-9">—</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 02 -->
+     <section class="entry card mb-4">
+      <div class="card-body">
+        <div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2">
+          <h3 class="mb-1">Piece 01: <span class="text-info">Title</span> <span class="muted fw-normal">(Year)</span></h3>
+          <a class="pill" href="#" target="_blank" rel="noopener">View on artist site →</a>
+        </div>
+        <hr class="hr my-3" />
+        <dl class="row mb-0">
+          <dt class="col-sm-3">Name</dt><dd class="col-sm-9">—</dd>
+          <dt class="col-sm-3">Domain</dt><dd class="col-sm-9">—</dd>
+          <dt class="col-sm-3">Position</dt><dd class="col-sm-9">—</dd>
+          <dt class="col-sm-3">Function</dt><dd class="col-sm-9">—</dd>
+          <dt class="col-sm-3">Colors</dt><dd class="col-sm-9">—</dd>
+          <dt class="col-sm-3">Symbolism</dt><dd class="col-sm-9">—</dd>
+          <dt class="col-sm-3">Meta‑Archetype Philosophy</dt><dd class="col-sm-9">—</dd>
+          <dt class="col-sm-3">Insight & Meditation</dt><dd class="col-sm-9">—</dd>
+        </dl>
+      </div>
+    </section>
+
+    <!-- 03 -->
+    <section class="entry card mb-4"><div class="card-body"><div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2"><h3 class="mb-1">Piece 03: <span class="text-info">Title</span> <span class="muted fw-normal">(Year)</span></h3><a class="pill" href="#" target="_blank" rel="noopener">View on artist site →</a></div><hr class="hr my-3" /><dl class="row mb-0"><dt class="col-sm-3">Name</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Domain</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Position</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Function</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Colors</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Symbolism</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Meta‑Archetype Philosophy</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Insight & Meditation</dt><dd class="col-sm-9">—</dd></dl></div></section>
+
+    <!-- 04 -->
+    <section class="entry card mb-4"><div class="card-body"><div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2"><h3 class="mb-1">Piece 04: <span class="text-info">Title</span> <span class="muted fw-normal">(Year)</span></h3><a class="pill" href="#" target="_blank" rel="noopener">View on artist site →</a></div><hr class="hr my-3" /><dl class="row mb-0"><dt class="col-sm-3">Name</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Domain</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Position</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Function</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Colors</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Symbolism</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Meta‑Archetype Philosophy</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Insight & Meditation</dt><dd class="col-sm-9">—</dd></dl></div></section>
+
+    <!-- 05-20 (identical blocks) -->
+    <!-- To keep this document readable here, the remaining 16 slots are abbreviated. Duplicate the template to add more as needed. -->
+    
+    <section class="entry card mb-4"><div class="card-body"><div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2"><h3 class="mb-1">Piece 05: <span class="text-info">Title</span> <span class="muted fw-normal">(Year)</span></h3><a class="pill" href="#" target="_blank" rel="noopener">View on artist site →</a></div><hr class="hr my-3" /><dl class="row mb-0"><dt class="col-sm-3">Name</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Domain</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Position</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Function</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Colors</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Symbolism</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Meta‑Archetype Philosophy</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Insight & Meditation</dt><dd class="col-sm-9">—</dd></dl></div></section>
+
+    <section class="entry card mb-4"><div class="card-body"><div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2"><h3 class="mb-1">Piece 06: <span class="text-info">Title</span> <span class="muted fw-normal">(Year)</span></h3><a class="pill" href="#" target="_blank" rel="noopener">View on artist site →</a></div><hr class="hr my-3" /><dl class="row mb-0"><dt class="col-sm-3">Name</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Domain</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Position</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Function</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Colors</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Symbolism</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Meta‑Archetype Philosophy</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Insight & Meditation</dt><dd class="col-sm-9">—</dd></dl></div></section>
+
+    <section class="entry card mb-4"><div class="card-body"><div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2"><h3 class="mb-1">Piece 07: <span class="text-info">Title</span> <span class="muted fw-normal">(Year)</span></h3><a class="pill" href="#" target="_blank" rel="noopener">View on artist site →</a></div><hr class="hr my-3" /><dl class="row mb-0"><dt class="col-sm-3">Name</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Domain</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Position</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Function</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Colors</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Symbolism</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Meta‑Archetype Philosophy</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Insight & Meditation</dt><dd class="col-sm-9">—</dd></dl></div></section>
+
+    <section class="entry card mb-4"><div class="card-body"><div class="d-flex justify-content-between align-items-baseline flex-wrap gap-2"><h3 class="mb-1">Piece 08: <span class="text-info">Title</span> <span class="muted fw-normal">(Year)</span></h3><a class="pill" href="#" target="_blank" rel="noopener">View on artist site →</a></div><hr class="hr my-3" /><dl class="row mb-0"><dt class="col-sm-3">Name</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Domain</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Position</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Function</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Colors</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Symbolism</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Meta‑Archetype Philosophy</dt><dd class="col-sm-9">—</dd><dt class="col-sm-3">Insight & Meditation</dt><dd class="col-sm-3">—</dd></dl></div></section>
+
+    <!-- Duplicate more as needed up to 20 -->
+
+    <footer class="py-4 mt-5 border-top border-secondary">
+      <div class="muted">© Terri Clark — MIRA meta‑archetype study. All artworks © Joan [Last]; links provided for reference under fair linking. No images are hosted here.</div>
+    </footer>
+  </main>
+</body>
+</html>
